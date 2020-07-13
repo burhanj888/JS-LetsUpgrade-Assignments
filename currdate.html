@@ -1,0 +1,49 @@
+<html> 
+  
+<head> 
+    <title> 
+        current date 
+    </title> 
+</head> 
+  
+<body style="text-align:center;"
+      id="body"> 
+    <h1 style="color:rgb(54, 76, 134);">   
+            Current Date   
+        </h1> 
+    <p id="datentime" 
+       style="font-size: 30px;  
+              font-weight: bold;"> 
+    </p> 
+    <button onclick="get_date()"> 
+        get Date 
+    </button> 
+    <p id="date" 
+       style="color:rgb(0, 87, 128);  
+              font-size: 50px;  
+              font-weight: bold;"> 
+    </p> 
+    <script> 
+        var el_up = document.getElementById("datentime"); 
+        var el_down = document.getElementById("date"); 
+        var today = new Date(); 
+        el_up.innerHTML = today; 
+        var dd = today.getDate(); 
+        var mm = today.getMonth() + 1; 
+  
+        var yyyy = today.getFullYear(); 
+        if (dd < 10) { 
+            dd = '0' + dd; 
+        } 
+        if (mm < 10) { 
+            mm = '0' + mm; 
+        } 
+        var today = dd + '/' + mm + '/' + yyyy; 
+  
+        function get_date() { 
+            el_down.innerHTML = today; 
+        } 
+    </script> 
+</body> 
+  
+</html> 
