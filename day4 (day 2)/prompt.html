@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Please click the button for prompt box.</p>
+
+<button onclick="sayHello()">Click me</button>
+
+<p id="hello"></p>
+
+<script>
+function sayHello() {
+  var person = prompt("Please enter your name", "");
+  if (person != null) {
+    document.getElementById("hello").innerHTML =
+    "Hello " + person + "! How are you ?";
+  }
+}
+</script>
+
+</body>
+</html>

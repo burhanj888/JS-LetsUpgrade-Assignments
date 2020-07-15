@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Check your eligibility to drink</p>
+
+<button onclick="eligibility()">Click me</button>
+<p id="check"></p>
+
+<script>
+function eligibility() {
+  var age = prompt("Please enter your age", "");
+  if (age >= 21 ) {
+    document.getElementById("check").innerHTML =
+    "Can drink";
+  }
+   else {
+  document.getElementById("check").innerHTML =
+    "Cannot drink";
+}
+}
+</script>
+
+</body>
+</html>

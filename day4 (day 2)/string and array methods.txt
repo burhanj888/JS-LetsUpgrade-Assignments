@@ -1,0 +1,396 @@
+Q2.Explain with example the methods of String and Array
+ans.
+Methods of string 
+1)charAt()	
+Returns the character at the specified index (position)
+eg- 
+var str = "HELLO WORLD";
+var res = str.charAt(0);
+
+2)charCodeAt()	
+Returns the Unicode of the character at the specified index
+eg - 
+var str = "HELLO WORLD";
+var n = str.charCodeAt(0);
+
+3)concat()	
+Joins two or more strings, and returns a new joined strings
+eg- 
+var str1 = "Hello ";
+var str2 = "world!";
+var res = str1.concat(str2);
+
+4)endsWith()	
+Checks whether a string ends with specified string/characters
+eg -
+var str = "Hello world, welcome to the universe.";
+var n = str.endsWith("universe.");
+
+5)fromCharCode()	
+Converts Unicode values to characters
+eg -
+var res = String.fromCharCode(65);
+
+6)includes()	
+Checks whether a string contains the specified string/characters
+eg -
+var str = "Hello world, welcome to the universe.";
+var n = str.includes("world");
+
+7)indexOf()	
+Returns the position of the first found occurrence of a specified value in a string
+eg -
+var str = "Hello world, welcome to the universe.";
+var n = str.indexOf("welcome");
+
+8)lastIndexOf()	
+Returns the position of the last found occurrence of a specified value in a string
+eg -
+var str = "Hello planet earth, you are a great planet.";
+var n = str.lastIndexOf("planet");
+
+9)localeCompare()	
+Compares two strings in the current locale
+eg -
+var str1 = "ab";
+var str2 = "cd";
+var n = str1.localeCompare(str2);
+
+10)match()	
+Searches a string for a match against a regular expression, and returns the matches
+eg -
+var str = "The rain in SPAIN stays mainly in the plain";
+var res = str.match(/ain/g);
+
+11)repeat()	
+Returns a new string with a specified number of copies of an existing string
+eg -
+var str = "Hello world!";
+str.repeat(2);
+
+12)replace()	
+Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+eg -
+var str = "Visit Microsoft!";
+var res = str.replace("Microsoft", "W3Schools");
+
+13)search()	
+Searches a string for a specified value, or regular expression, and returns the position of the match
+eg -
+var str = "Visit W3Schools!";
+var n = str.search("W3Schools");
+
+14)slice()	
+Extracts a part of a string and returns a new string
+eg -
+var str = "Hello world!";
+var res = str.slice(0, 5);
+
+15)split()	
+Splits a string into an array of substrings
+eg -
+var str = "How are you doing today?";
+var res = str.split(" ");
+
+16)startsWith()	
+Checks whether a string begins with specified characters
+eg -
+var str = "Hello world, welcome to the universe.";
+var n = str.startsWith("Hello");
+
+17)substr()	
+Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+eg -
+var str = "Hello world!";
+var res = str.substr(1, 4);
+
+18)substring()	
+Extracts the characters from a string, between two specified indices
+eg -
+var str = "Hello world!";
+var res = str.substring(1, 4);
+
+19)toLocaleLowerCase()	
+Converts a string to lowercase letters, according to the host's locale
+eg -
+var str = "Hello world!";
+var res = str.substring(1, 4);
+
+20)toLocaleUpperCase()	
+Converts a string to uppercase letters, according to the host's locale
+eg -
+var str = "Hello World!";
+var res = str.toLocaleUpperCase();
+
+21)toLowerCase()	
+Converts a string to lowercase letters
+eg -
+var str = "Hello World!";
+var res = str.toLowerCase();
+
+22)toString()	
+Returns the value of a String object
+eg -
+var str = "Hello World!";
+var res = str.toString();
+
+23)toUpperCase()	
+Converts a string to uppercase letters
+eg -
+var str = "Hello World!";
+var res = str.toUpperCase();
+
+24)trim()	
+Removes whitespace from both ends of a string
+eg -
+var str = "       Hello World!        ";
+alert(str.trim());
+
+25)valueOf()	
+Returns the primitive value of a String object
+eg -
+var str = "Hello World!";
+var res = str.valueOf();
+
+Methods of array
+1)concat()	
+Joins two or more arrays, and returns a copy of the joined arrays
+eg- 
+var hege = ["Cecilie", "Lone"];
+var stale = ["Emil", "Tobias", "Linus"];
+var children = hege.concat(stale);
+
+2)copyWithin()	
+Copies array elements within the array, to and from specified positions
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0);
+
+3)entries()	
+Returns a key/value pair Array Iteration Object
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var f = fruits.entries();
+
+for (x of f) {
+  document.getElementById("demo").innerHTML += x;
+}
+
+4)every()	
+Checks if every element in an array pass a test
+eg- 
+var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.every(checkAdult);
+}
+
+5)fill()	
+Fill the elements in an array with a static value
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.fill("Kiwi");
+
+6)filter()	
+Creates a new array with every element in an array that pass a test
+eg- 
+var ages = [32, 33, 16, 40];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+}
+
+7)find()	
+Returns the value of the first element in an array that pass a test
+eg- 
+var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.find(checkAdult);
+}
+
+8)findIndex()	
+Returns the index of the first element in an array that pass a test
+eg- 
+var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.findIndex(checkAdult);
+}
+
+9)forEach()	
+Calls a function for each array element
+eg- 
+var fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+function myFunction(item, index) {
+  document.getElementById("demo").innerHTML += index + ":" + item + "<br>";
+}
+
+10)from()	
+Creates an array from an object
+eg- 
+var myArr = Array.from("ABCDEFG");
+
+11)includes()	
+Check if an array contains the specified element
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var n = fruits.includes("Mango");
+
+12)indexOf()	
+Search the array for an element and returns its position
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var a = fruits.indexOf("Apple");
+
+13)isArray()	
+Checks whether an object is an array
+eg- 
+function myFunction() {
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  var x = document.getElementById("demo");
+  x.innerHTML = Array.isArray(fruits);
+}
+
+14)join()	
+Joins all elements of an array into a string
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var energy = fruits.join();
+
+15)keys()	
+Returns a Array Iteration Object, containing the keys of the original array
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var fk = fruits.keys();
+
+for (x of fk) {
+  document.getElementById("demo").innerHTML += x + "<br>";
+}
+
+16)lastIndexOf()	
+Search the array for an element, starting at the end, and returns its position
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var a = fruits.lastIndexOf("Apple");
+
+17)map()	
+Creates a new array with the result of calling a function for each array element
+eg- 
+var numbers = [4, 9, 16, 25];
+var x = numbers.map(Math.sqrt)
+document.getElementById("demo").innerHTML = x;
+
+
+18)pop()	
+Removes the last element of an array, and returns that element
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();
+
+19)push()	
+Adds new elements to the end of an array, and returns the new length
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");
+
+20)reduce()	
+Reduce the values of an array to a single value (going left-to-right)
+eg- 
+var numbers = [175, 50, 25];
+
+document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+21)reduceRight()	
+Reduce the values of an array to a single value (going right-to-left)
+eg- 
+var numbers = [175, 50, 25];
+
+document.getElementById("demo").innerHTML = numbers.reduceRight(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+22)reverse()	
+Reverses the order of the elements in an array
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse();
+
+23)shift()	
+Removes the first element of an array, and returns that element
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+
+24)slice()	
+Selects a part of an array, and returns the new array
+eg- 
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);
+
+25)some()	
+Checks if any of the elements in an array pass a test
+eg- 
+var ages = [3, 10, 18, 20];
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = ages.some(checkAdult);
+}
+
+26)sort()	
+Sorts the elements of an array
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+27)splice()	
+Adds/Removes elements from an array
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+28)toString()	
+Converts an array to a string, and returns the result
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.toString();
+
+29)unshift()	
+Adds new elements to the beginning of an array, and returns the new length
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon","Pineapple");
+
+30)valueOf()	
+Returns the primitive value of an array
+eg- 
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var v = fruits.valueOf();
