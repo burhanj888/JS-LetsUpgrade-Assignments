@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="grade"></h2>
+    <script>
+        let marks = prompt('enter your marks', 0);
+
+        if(marks >= 80){
+
+            document.getElementById("grade").innerHTML = "Congratulations! your marks are " +marks+ " and grade is A";
+        }
+        else if(marks < 80 && marks >= 50){
+
+            document.getElementById("grade").innerHTML = "Keep it up! your marks are " +marks+ " and grade is B";
+        }
+        else if(marks < 50 && marks >= 31){
+
+            document.getElementById("grade").innerHTML = "work hard! your marks are " +marks+ " and grade is C";
+        }
+        else{
+            document.getElementById("grade").innerHTML = "Sorry you are failed! your marks are " +  marks + " and grade is D"
+        }
+
+    </script>
+    
+</body>
+</html>

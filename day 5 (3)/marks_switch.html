@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="grade" ></h2>
+    <script>
+        let marks = prompt("enter your marks", 0);
+
+        switch(true){
+
+            case marks>=80 : 
+            document.getElementById("grade").innerHTML= "Congratulations! your marks are " +marks+ " and grade is A";
+            break;
+            case marks>=50 : 
+            document.getElementById("grade").innerHTML= "Keep it up! your marks are " +marks+ " and grade is B";
+            break;
+            case marks>=31 : 
+            document.getElementById("grade").innerHTML= "Work hard! your marks are " +marks+ " and grade is C";
+            break;
+            case marks<31 : 
+            document.getElementById("grade").innerHTML= "Sorry you are failed! your marks are " +marks+ " and grade is D";
+            break;
+            default: document.getElementById("grade").innerHTML = "enter valid input";
+            
+        }
+    </script>
+</body>
+</html>
