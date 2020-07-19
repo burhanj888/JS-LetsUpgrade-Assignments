@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="sales" placeholder="Enter Sales"><br>
+    <label for="sales"></label><br>
+    <input type="submit" onclick="reward();" value="submit">
+
+    <h3 id="commission"></h3>
+
+    <script>
+        function reward(){
+            var sales= parseFloat(document.getElementById("sales").value);
+            var comm;
+            switch(true){
+                case sales<=5000 : comm = 2;
+                break;
+                case sales>5000 && sales<=10000 : comm = 5;
+                break;
+                case sales>10000 && sales<=20000 : comm = 7;
+                break;
+                case sales>20000 : comm = 10;
+                break;
+                default : document.getElementById("sales").innerHTML = "enter valid sales";
+                
+
+            }
+
+    
+            
+            commission = parseFloat(sales*comm*0.01);
+            document.getElementById("commission").innerHTML= "congratulations your reward is " + commission;
+
+
+        }
+    </script>
+
+
+</body>
+</html>

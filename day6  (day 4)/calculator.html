@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Calculator</title>
+</head>
+<body>
+<input type="text" id="num1" placeholder="Enter Number"><br>
+<input type="text" id="num2" placeholder="Enter Number"><br>
+<select id="sel"><br>
+<option value="">Select</option>
+<option value="division">division</option>
+<option value="substract">substract</option>
+<option value="addition">addition</option>
+<option value="multiply">multiply</option>
+<option value="square">Exponential</option>
+<option value="percent">percent</option>
+</select><br>
+<input type="submit" onclick="addition()" value="submit">
+<br/>
+<div id="result"></div>
+<script>
+function addition(){
+var num1= parseFloat(document.getElementById("num1").value);
+var num2= parseFloat(document.getElementById("num2").value);
+var sel=document.getElementById("sel").value;
+var result;
+if(sel=='addition'){
+result=num1+num2;
+}else if(sel=='substract'){
+result=num1-num2;
+}else if(sel=='division'){
+result=num1/num2;
+}else if(sel=='multiply'){
+result=num1*num2;
+}else if(sel=='square'){
+result=num1**num2;
+}else if(sel=='percent'){
+result=num1*100/num2;
+}
+else{
+result=num1*num2;
+}
+document.getElementById("result").innerHTML=result;
+}
+</script>
+</body>
+</html>

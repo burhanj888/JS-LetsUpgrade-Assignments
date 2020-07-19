@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label  for="shoppinglist">Shopping list</label>
+    <h3 id="shoppinglist"></h3>
+    <label for="newitem">New item added</label>
+    <h3 id="newitem"></h3>
+    <label for="shoppingbasket">Items in shopping basket</label>
+    <h3 id="shoppingbasket"></h3>
+
+
+    <script>
+        var ShoppingList = ["detergent", "soap", "sugar", "biscuit"];
+        document.getElementById("shoppinglist").innerHTML= ShoppingList;
+
+        var newItem = ["bulb", "battery", "sanatizer"];
+        document.getElementById("newitem").innerHTML= newItem;
+
+        var ShoppingBasket = ShoppingList.concat(newItem);
+        document.getElementById("shoppingbasket").innerHTML= ShoppingBasket;
+    </script>
+</body>
+</html>
