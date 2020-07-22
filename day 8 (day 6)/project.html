@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2 id="time" style="text-align:center;"></h2>
+    <h3 id="welcome" style="text-align:center;"></h3>
+    <label for="switch">Dark mode</label>
+    <input type="checkbox" id="switch" name="dark theme" onchange="myFunction()">
+
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+    </style>
+    <script>
+
+        name = prompt("enter your name");
+        document.getElementById("welcome").innerText = "hello " + name + " ! welcome to our page";
+
+        const ctime = document.getElementById('time');
+
+
+        function clock(){
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        ctime.innerText = time;
+        }
+        setInterval(clock,1000);
+
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+    </script>
+    
+</body>
+</html>
